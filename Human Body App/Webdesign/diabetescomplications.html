@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Diabetes Complications</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="scripts/jquery.imagemapster.js"></script>
+<style>
+
+</style>
+</head>
+
+<body>
+<div style="clear: both; width: 526px; height: 100px; border: 5px solid black;" id="selections"></div>
+<div id="image">
+<img id="shape1" src="figure.gif" alt="shape1" usemap="#shape1">
+ </div>
+
+<script>
+var xref = {
+        heart: "The Heart",
+        brain: "The brain and central nervous system",
+        eye1: "The eyes: blurred vision",
+		eye2: "The eyes: blurred vision",
+		
+    };
+	
+	
+$(document).ready(function ()
+{
+	$('#shape1').mapster({
+	singleSelect : true,
+	render_highlight : { altImage : 'brain.gif'},
+     mapKey: 'bodypart',
+	fill : true, altImage : 'heart.gif',
+	fillOpacity : 1,
+	stroke : true,
+	strokeColor : '000000',
+	strokeWidth : 3,
+	onClick : function (e) {$('#selections').html(xref[e.key]);}
+	
+});
+});
+</script>
+
+<map name="shape1">
+<area href="#" bodypart="eye1" shape="poly" coords="276,136,299,128,320,132,328,140,320,147,305,150,292,150,285,148,277,143" />
+<area href="#" bodypart="eye2" alt="The eyes" shape="poly" coords="207,130,177,133,175,144,206,152,227,142,229,138,224,133"  />
+<area href="brain.htm" bodypart="brain" alt="The Brain" shape="poly" coords="156,97,233,114,336,101,340,76,328,55,311,49,291,42,279,36,265,34,247,30,232,30,207,34,192,42,178,51,164,63,153,81" />
+<area href="#" bodypart="kidney1"  alt="the kidneys" shape="poly" coords="187,415,170,429,166,447,169,465,176,478,191,478,198,470,191,454,187,444,193,437,195,427"    />
+<area href="#" bodypart="kidney2" alt="the kidneys" title="kidney2" href="#" shape="poly" coords="302,430,296,440,297,451,307,458,310,466,308,474,300,478,306,488,319,487,328,475,327,464,327,448,324,439,317,433"   />
+<area href="#" bodypart="heart" alt="heart" shape="poly" coords="249,309,232,327,235,348,249,362,268,352,276,334,276,319,268,308"  />
+<area href="#" bodypart="foot1" alt="foot1" shape="poly" coords="273,727,308,727,346,749,339,751,345,763,337,760,339,771,328,767,329,779,322,783,315,775,318,787,303,785,297,768,280,752,273,739" />
+<area href="#" bodypart="foot2" alt="foot2" shape="poly" coords="205,727,238,730,236,749,229,759,220,763,216,772,213,780,210,784,200,785,196,785,200,775,192,779,189,780,185,776,188,769,181,771,177,768,175,764,182,759,176,761,170,761,168,760,174,752,168,751,168,746"  />
+<area shape="default" nohref>
+</map>
+</body>
