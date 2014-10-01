@@ -38,9 +38,16 @@ $(document).ready(function ()
 	strokeColor : '000000',
 	strokeWidth : 3,
 	onClick : function (e) {$('#selections').html(xref[e.key]);}
+	$('#shape1').mapster({
+        areas:  [{
+               key: "eye1", 
+               selected: true
+            }]
+});
+});
+});
+
 	
-});
-});
 </script>
 
 <map name="shape1">
