@@ -2,25 +2,36 @@
 <html>
 	<head>
 		<title>Living with Diabetes</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-type" content="text/html"; charset="UTF-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="viewport" content="width=device-width">
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
+		
+		
+		
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/jquery.scrollgress.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="scripts/jquery.imagemapster.js"></script>
 		<script src="js/init.js"></script>
-    <script type="text/javascript">
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+		
+<script type="text/javascript">
 function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
-    </script>
+ </script> 
+ 
+
+
+
+	
 <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -31,7 +42,9 @@ function MM_preloadImages() { //v3.0
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body class="index">
+	
 
+		
 		<!-- Header -->
 	<!--
 			<header id="header" class="alt">
@@ -186,11 +199,130 @@ function MM_preloadImages() { //v3.0
 							<h2>App<strong></strong></h2>
 						</header>
 						
-						<div class="row">
+						<div>
 						  <p>Click on a body part to learn how it relates to diabetes</p>
 						  <p>&nbsp;</p>
-					    <img src="images/body_all_muted.png" alt="" name="Body" width="916" height="1099"></div>
-						<div class="row"></div>
+						<img id="body" src="images/body_all_muted_2.gif" usemap="#body-map">
+<map name="body-map">
+    <area shape="poly" data-name="heart,all" coords= "455,284,445,284,440,278,442,266,436,265,436,275,428,270,424,275,
+	434,280,442,290,439,296,429,292,422,284,420,283,416,286,423,297,413,299,412,300,413,304,426,303,437,305,433,309,
+	425,313,425,318,419,324,419,341,423,348,430,357,450,364,464,369,475,373,484,371,491,366,494,354,492,344,487,330,
+	482,325,486,323,480,312,473,310,477,307,495,308,495,303,475,300,480,297,494,295,495,292,479,292,474,293,470,294,
+	470,288,476,274,466,271,461,281,464,267,456,267,457,283,446,285" href="#" />
+	
+    <area shape="poly" data-name="brain,all" coords="450,84,424,91,415,97,410,107,407,122,412,133,412,142,420,146,429,
+	151,438,159,448,160,462,160,480,150,495,148,497,137,504,127,499,109,481,92,475,88,468,85" href="#" />
+	
+    <area shape="poly" data-name="kidney,all" coords="415,417,425,410,428,404,428,394,422,388,414,387,402,389,393,398,
+	388,403,386,410,382,418,382,426,382,440,385,445,392,460,403,463,418,461,423,460,417,469,415,483,415,497,417,510,
+	418,491,421,478,423,468,430,447,428,432,423,421,416,416" href="#" />
+	
+	<area shape="poly" data-name="kidney,all" coords="498,388,485,392,483,404,485,411,493,416,496,419,486,426,483,442,
+	485,457,493,474,495,490,492,504,496,505,500,491,493,466,491,457,505,464,513,461,520,455,528,442,532,425,528,408,
+	522,399,513,390,496,387" href="#" />
+	
+    <area shape="poly" data-name="feet,all" coords="383,996,384,1011,388,1020,367,1059,368,1063,384,1068,411,1074,423,
+	1060,425,1043,425,1030,429,1017,423,1005,423,989,384,995" href="#" />
+	
+	<area shape="poly" data-name="feet,all" coords="481,988,518,994,522,1011,517,1020,536,1058,490,1075,487,1068,481,
+	1054,477,1043,480,1034,479,1028,477,1022,477,1015,482,1006,480,989,482,987" href="#" />
+	
+</map>
+<div style="width:390px; height: 120px; font-size: 12px; position: relative; top: -1000px; left: 700px; font-family: Verdana;">
+    <div id="body-caption" style="clear:both;border: 1px solid black; width: 400px; padding: 6px; display:none;">
+        <div id="body-caption-header" style="font-style: italic; font-weight: bold; margin-bottom: 12px;"></div>
+        <div id="body-caption-text"></div>
+    </div>
+</div>
+
+
+<script>
+$('img').mapster();
+
+var inArea,
+    map = $('#body'),
+    captions = {
+        heart: ["Heart Disease",
+			"You can lower your risk by keeping your blood glucose (also called blood sugar),"
+			+ "blood pressure, and blood cholesterol close to the recommended target levels "
+			+ "suggested by diabetes experts Reaching your targets can help prevent narrowing"],
+        brain: ["Brain and Nerves",
+            "There are a range of different issues with the nerves that diabetic patients "
+            + "you may experience weakness in your muscles, or loss of feeling in your hands "
+            + "and feet"],
+        kidney: ["Kidneys",
+            "The main job of the kidneys is to remove waste from the blood and return the "
+            + "cleaned blood back to the body. Kidney failure means the kidneys are no  "
+            + "longer able to remove waste and maintain the level of fluid and salts that" 
+			+ "the body needs."],
+        feet: ["Feet and Hands",
+            "Your feet are at risk because diabetes can cause damage to the nerves and the blood supply."
+            + "Poor blood glucose control can cause nerve damage to feet. "]
+    },
+    single_opts = {
+		isSelectable: true,
+		singleSelect : true,
+		render_highlight : { altImage : 'body_all_2.gif'},
+		fill : true, 
+		altImage : 'body_outline_colour_2.gif',
+		fillOpacity : 1,
+        fillColor: '000000',
+        fillOpacity: 0,
+        stroke: true,
+        strokeColor: 'ff0000',
+        strokeWidth: 2
+		
+    },
+    all_opts = {
+        fillColor: 'ffffff',
+        fillOpacity: 0.6,
+        stroke: true,
+        strokeWidth: 2,
+        strokeColor: 'ffffff'
+    },
+    initial_opts = {
+        mapKey: 'data-name',
+        isSelectable: true,
+		singleSelect : true,
+		render_highlight : { altImage : 'body_all_2.gif'},
+		fill : true, altImage : 'body_outline_colour_2.gif',
+		fillOpacity : 1,
+        onMouseover: function (data) {
+            inArea = true;
+            $('#body-caption-header').text(captions[data.key][0]);
+            $('#body-caption-text').text(captions[data.key][1]);
+            $('#body-caption').show();
+			altImage : 'body_all_2.gif';
+			
+        },
+        onMouseout: function (data) {
+            inArea = false;
+            $('#body-caption').hide();
+        },
+		
+		onClick : function (data) {
+			$('#body-caption-header').text(captions[data.key][0]);
+            $('#body-caption-text').text(captions[data.key][1]);
+            $('#body-caption').show();}
+    };
+    opts = $.extend({}, all_opts, initial_opts, single_opts);
+
+
+    map.mapster('unbind')
+        .mapster(opts)
+        .bind('mouseover', function () {
+            if (!inArea) {
+                map.mapster('set_options', all_opts)
+                    .mapster('set', true, 'all')
+                    .mapster('set_options', single_opts);
+            }
+        }).bind('mouseout', function () {
+            if (!inArea) {
+                map.mapster('set', false, 'all');
+            }
+        });
+</script>
+</div>
 					</section>
 					
 			</article>
@@ -202,7 +334,7 @@ function MM_preloadImages() { //v3.0
                 <p></p>
 					<h2>Princess Margaret Hospital</h2>
 					<p>We are committed to the pursuit of healthier
-lives for children and young people.</p>
+						lives for children and young people.</p>
 					<p></p>
 				</header>
 				<footer>
@@ -234,5 +366,7 @@ lives for children and young people.</p>
 			
 			</footer>
 
-	</body>
+
+
+</body>
 </html>
