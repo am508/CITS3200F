@@ -97,19 +97,6 @@ function MM_preloadImages() { //v3.0
 							<h2>Effects of Diabetes</h2>
 							  <p>Many effects of diabetes will only develop after prolonged periods of high levels of blood glucose. Diabetes can lead to major complications including blindness, heart disease, stroke and kidney failure.<br><br>The following interactive tool will help explain what diabetes actually is and how it affects different parts of the body</p>
 
-<body>
-
-	<audio controls>
-	  <source src="audio/melody_1.wav" type="audio/wav">
-	  <source src="audio/melody_1.ogg" type="audio/ogg">
-	  <source src="audio/melody_1.mp3" type="audio/mp3">
-	</audio>
-
-</body>
-			<p>
-	
-			</p>
-
 								<footer>
 									<ul class="buttons">
 										<li><a href="#app" class="button fit scrolly">Find Out More</a></li>
@@ -332,6 +319,58 @@ var inArea,
         });
 </script>
 </div>
+    <audio id="audio" preload="auto" tabindex="0" controls="" type="audio/ogg">
+        <source type="audio/ogg" src="Audio/Heart.ogg">
+        Sorry, your browser does not support HTML5 audio.
+    </audio>
+    <ul id="playlist">
+        <li class="active"><a href="Audio/Heart.ogg">The Heart</a></li>
+        <li><a href="Audio/Eyes.ogg">The Eyes</a></li>
+        <li><a href="Audio/Kidneys.ogg">The Kidneys</a></li>
+        <li><a href="Audio/Nerves.ogg">The Nerves</a></li>
+
+    </ul>
+    <script>
+var audio;
+var playlist;
+var tracks;
+var current;
+
+init();
+function init(){
+    current = 0;
+    audio = $('audio');
+    playlist = $('#playlist');
+    tracks = playlist.find('li a');
+    len = tracks.length - 1;
+    audio[0].volume = .10;
+    audio[0].play();
+    playlist.find('a').click(function(e){
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        run(link, audio[0]);
+    });
+    audio[0].addEventListener('ended',function(e){
+        current++;
+        if(current == len){
+            current = 0;
+            link = playlist.find('a')[0];
+        }else{
+            link = playlist.find('a')[current];    
+        }
+        run($(link),audio[0]);
+    });
+}
+function run(link, player){
+        player.src = link.attr('href');
+        par = link.parent();
+        par.addClass('active').siblings().removeClass('active');
+        audio[0].load();
+        audio[0].play();
+}
+</script>
+
 					</section>
 					
 			</article>
