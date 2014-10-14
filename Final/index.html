@@ -226,7 +226,7 @@ function MM_preloadImages() { //v3.0
 	236,174,248,172,249,174,236,177,249,179,249,182,236,181,236,185,240,186,242,191,242,194,245,200,247,208,247,217,244,
 	222"  href="#" />
 	
-    <area shape="poly" data-name="brain,all" coords="212,72,215,75,220,75,229,76,234,70,236,69,231,69,231,65,231,62,
+    <area shape="poly" data-name="heart,all" coords="212,72,215,75,220,75,229,76,234,70,236,69,231,69,231,65,231,62,
 	235,60,241,60,246,63,247,65,249,61,254,54,251,49,252,44,250,39,248,35,240,27,238,26,236,23,233,23,231,23,226,21,
 	223,22,223,26,221,22,211,25,205,27,202,27,199,30,198,33,196,35,195,43,194,51,196,58,196,62,202,61,205,59,208,57,
 	211,60,213,61,214,63,214,66,210,69" href="#" />
@@ -252,8 +252,8 @@ function MM_preloadImages() { //v3.0
 	href="#" />
 	
 </map>
-<div style="width:1000px; font-size: 12px; position: relative; top: -800px; left: 400px; font-family: Verdana;">
-    <div id="body-caption" style="clear:both;border: 1px solid black; width: 400px; padding: 6px; display:none;">
+<div style="width:1000px; height:120px; font-size:12px; position: relative; top: -800px; left: 400px; font-family: Verdana;">
+    <div id="body-caption" style="clear:both;border: 1px solid black; width: 510px; height: 810px; padding: 3px; display:none;">
         <div id="body-caption-header" style="font-style: italic; margin-bottom: 12px;"></div>
         <div id="body-caption-text"></div>
     </div></div>
@@ -266,8 +266,11 @@ $('img').mapster();
 var inArea,
     map = $('#body'),
     captions = {
-        heart: ["Heart Disease",
-			"Cardiovascular disease is when you have damage to your heart and blood vessels. "
+        heart: ["Heart and Brain",
+			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+			+"<source type=\"audio/ogg\" src=\"Audio/Heart.ogg\">"
+			+"Sorry, your browser does not support HTML5 audio."
+			+"</audio> <br></br>Cardiovascular disease is when you have damage to your heart and blood vessels. "
 			+ "It includes heart attacks, heart failure, strokes and circulation problems. "
 			+ "The major blood vessels are called arteries and veins. The arteries carry blood "
 			+ "away from your heart which veins carry blood towards your heart. When cholesterol "
@@ -281,23 +284,15 @@ var inArea,
 			+ "A heart attack can happen when the blood vessels to your heart are blocked,"
 			+ "while a stroke can happen when the blood vessels to your brain are blocked. After a heart " 
 			+ "attack, your heart might not be able to pump as much blood which is known as heart failure. "
-			+ "People with diabetes have a higher risk of heart attack, heart failure and stroke."],
+			+ "People with diabetes have a higher risk of heart attack, heart failure and stroke."
+			+ "<img src=\"images/nerves.jpg\">"],
 			
-        brain: ["Brain and Nerves",
-            "Research shows that having diabetes more than doubles the risk of depression. Depression can "
-			+ "increase the likelihood of developing other diabetes complications. Depression is a serious "
-			+ "illness that can make it hard to do normal activities and function day to day. <br></br>"
-			+ "Depression has a lot of signs and symptoms to watch out for. A person may be depressed "
-			+ "if for more than two weeks they have: <br> </br>Felt sad, down or miserable most of"
-			+ "the time OR Lost interest or pleasure in most of their usual activities and Experienced symptoms"
-			+ " in a least three of the following groups: <ul> <li> <u>Behaviour:</u> They've stopped going out, they are "
-			+ "Unable to concentrate, they have lost interest in their hobbies and are withdrawn from friends and family </li>"
-			+ "<li> <u>Thoughts:</u> 'I'm worthless','Nothing good ever happens to me''I'm a failure' </li>"
-			+ "<li> <u> Feelings: </u> Sad, Irritable, Guilty, Overwhelmed </li> <li> <u> Physical: </u> Trouble sleeping"
-			+ "Always tired, Headaches and muscle pain </li> <img src=\"images/nerves.jpg\">"],
 			
         kidney: ["Kidneys",
-			"The kidneys are a filtering system for the body. They help clean the blood by removing "
+			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+			+"<source type=\"audio/ogg\" src=\"Audio/Kidneys.ogg\">"
+			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+			+ "The kidneys are a filtering system for the body. They help clean the blood by removing "
 			+ "waste products and passing them out in urine. High blood glucose levels place extra " 
 			+ "pressure on the filters which can cause reusable nutrients like protein to leak."
 			+ " Having small amounts of protein in your urine is called microalbuminuria, while having "
@@ -313,7 +308,10 @@ var inArea,
 			+ "so regular testing and annual check-ups with your doctor are important" ],
 			
         feet: ["Feet",
-            "High blood glucose levels can cause damage to the walls of the small blood vessels which that "
+			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+			+"<source type=\"audio/ogg\" src=\"Audio/Nerves.ogg\">"
+			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+            +"High blood glucose levels can cause damage to the walls of the small blood vessels which that "
 			+ "nourish the nerves, especially the ones in the legs. This can cause tingling, numbness, a "
 			+ "burning sensation and/or shooting pains. The numbness can make it difficult to notice cuts "
 			+ "and other injuries until they get much worse. The damage to the small blood vessels can also "
@@ -325,7 +323,10 @@ var inArea,
 			+ "feet and legs, they can also affect the hands, arms and skin on the rest of your body. "],
 		
 		eye: ["Eyes",
-            " The retina is the part of the eye that sees. It is a layer of cells in the back of the eye. "
+			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+			+"<source type=\"audio/ogg\" src=\"Audio/Eyes.ogg\">"
+			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+            +" The retina is the part of the eye that sees. It is a layer of cells in the back of the eye. "
 			+ "When light enters the eye, the retina changes any light that reaches it into signals that "
 			+ "are sent to the brain, which turns the signals into the images you see. Damage to the blood "
 			+ "vessels of the retina can affect vision. It is very important to look after your eyes. You "
