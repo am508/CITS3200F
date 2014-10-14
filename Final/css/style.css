@@ -2,7 +2,12 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
 
 /* Basic */
-
+	.customDiv {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 	body, #skel-layers-wrapper {
 		background: #f3f6fa;
 	}
