@@ -5,8 +5,9 @@
 	.customDiv {
 		display: none;
 		position: fixed;
-		top: 0;
+		top: 40%;
 		left: 0;
+		background: #333333
 	}
 	body, #skel-layers-wrapper {
 		background: #f3f6fa;
