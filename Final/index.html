@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Living with Diabetes</title>
@@ -81,16 +81,16 @@ function MM_preloadImages() { //v3.0   <!--This is a well known piece of code th
             
 				<header class="special container">
 					<span class="icon fa-heart-o"></span>
-					<h2>What is diabetes?</h2>
+					<h2>What is Type 1 Diabetes?</h2>
 				</header>
                 <section class="wrapper style1 container special">
 
 				<table>
 						<tr>
 							<th style="width:50%">
-								Diabetes is a chronic condition characterised by high levels of glucose in the blood. These high levels are caused by the pancreas being unable to produce enough insulin Insulin is a hormone made in the pancreas which is released into the blood stream and helps move glucose from the food we eat to our cells for energy.
+								Type 1 diabetes is a chronic condition characterised by high levels of glucose in the blood. These high levels are caused by the pancreas being unable to produce enough insulin Insulin is a hormone made in the pancreas which is released into the blood stream and helps move glucose from the food we eat to our cells for energy.
 								<br><br>
-								The cause of diabetes is not fully understood. Though there are known genetic markers, there are possibly a number of factors that trigger the onset of diabetes. Possible triggers include viral infections or similar stresses to the body, which cause the body's "fighting cells" (white blood cells) to attack the beta cells, mistaking them for foreign or harmful cells. Only the beta cells are affected in this very slow process that may take up to eight or nine years. Signs and symptoms of diabetes do not present until about ninety percent of beta calls have been destroyed.
+								The cause of type 1 diabetes is not fully understood. Though there are known genetic markers, there are possibly a number of factors that trigger the onset of diabetes. Possible triggers include viral infections or similar stresses to the body, which cause the body's "fighting cells" (white blood cells) to attack the beta cells, mistaking them for foreign or harmful cells. 
 							</th>
 							<th style="width:20%">
 								<section>						
@@ -279,14 +279,15 @@ function checkY(){
 			href="#" /> <!--Image coordinates for the feet-->
 			
 		</map>
-		<div style="width:1000px; height:120px; font-size:14px; position: relative; top: -740px; left: 400px; font-weight:bold; 
+		<div style="font-size:14px; position: relative; top: -740px; left: 400px; font-weight:bold; 
 			font-family: FontAwesome; text-align: justify; line-height: 16px;"> 
 			
-			<div id="body-caption" style="clear:both; width: 460px; height: 800px; padding: 10px; display:none; ">
+			<div id="body-caption" style=" clear:both; width: 460px; height: 800px; padding: 10px; display:none; ">
 			<!--The size, position of the actual app-->
 				<div id="body-caption-header" style="text-decoration: underline; margin-bottom: 10px; font-size:18px"></div>
 				<div id="body-caption-text"></div>
-			</div></div>
+			</div>
+			</div>
 
 
 
@@ -417,12 +418,20 @@ function checkY(){
 				singleSelect : true,
 				fillOpacity : 1,
 				
-				onMouseover: function (data) { //creates the caption box to the side retrieving the correct text
+
+				onClick: function (data) { //creates the caption box to side retrieving correct text;
 					inArea = true;
-					
+
 					$('#body-caption-header').html(captions[data.key][0]);
 					$('#body-caption-text').html(captions[data.key][1]);
 					$('#body-caption').show();
+					
+				},
+
+
+				onMouseover: function (data) { 
+					inArea = true;
+					
 					
 				},
 				onMouseout: function (data) {
