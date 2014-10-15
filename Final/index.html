@@ -249,206 +249,206 @@ function checkY(){
 						  <p>Having high blood glucose levels for a long period of time can increase the risk of the following health concerns. Click on a body part to discover more.</p>
 						  <p>&nbsp;</p>
 						<img id="body" src="images/body.gif"  usemap="#body-map"> <!--Links to body app-->
-<map name="body-map">
-    <area shape="poly" data-name="heart,all" coords="239,225,215,216,209,213,205,208,203,207,202,204,201,197,202,191,
-	205,188,211,181,208,179,198,180,198,177,207,176,200,168,202,166,211,172,215,172,216,170,206,162,209,159,212,161,
-	213,156,216,155,216,160,217,164,220,168,225,167,225,156,225,154,229,154,229,160,234,154,237,158,233,163,231,167,
-	236,174,248,172,249,174,236,177,249,179,249,182,236,181,236,185,240,186,242,191,242,194,245,200,247,208,247,217,244,
-	222"  href="#" /> <!--Image coordinates for the heart-->
-	
-    <area shape="poly" data-name="heart,all" coords="212,72,215,75,220,75,229,76,234,70,236,69,231,69,231,65,231,62,
-	235,60,241,60,246,63,247,65,249,61,254,54,251,49,252,44,250,39,248,35,240,27,238,26,236,23,233,23,231,23,226,21,
-	223,22,223,26,221,22,211,25,205,27,202,27,199,30,198,33,196,35,195,43,194,51,196,58,196,62,202,61,205,59,208,57,
-	211,60,213,61,214,63,214,66,210,69" href="#" /> <!--Image coordinates for the heart-->
-	
-	<area shape="poly" data-name="eye,all" coords="238,60,244,62,247,65,243,67,237,68,233,67,232,64,235,61" href="#" /> <!--Image coordinates for the eye-->
-	
-	<area shape="poly" data-name="eye,all" coords="209,68,213,67,214,63,211,60,207,59,204,61,200,64,204,67" href="#" /> <!--Image coordinates for the eye-->
-	
-    <area shape="poly" data-name="kidney,all" coords="202,257,205,254,208,248,205,241,200,239,193,239,189,241,184,246,
-	181,251,178,257,178,264,180,269,181,275,184,280,190,284,194,285,199,285,203,283,207,276,208,270,206,266,204,262"
-	href="#" /> <!--Image coordinates for the kidney-->
-	
-	<area shape="poly" data-name="kidney,all" coords="247,257,243,263,240,270,241,276,244,281,251,285,259,284,263,280,
-	268,274,269,267,269,257,265,248,261,242,254,239,247,239,242,243,241,250,245,255" href="#" /> <!--Image coordinates for the kidney-->
-	
-    <area shape="poly" data-name="feet,all" coords="181,653,203,651,205,655,205,668,208,675,206,683,206,691,206,697,203
-	,705,202,711,200,718,196,728,191,730,187,730,185,729,182,728,180,727,177,723,175,722,172,719,169,717,170,711,168,
-	708,169,701,173,690,177,683,179,678,181,677,181,668,179,668,180,662" href="#" /> <!--Image coordinates for the feet-->
-	
-	<area shape="poly" data-name="feet,all" coords="241,651,262,652,264,657,264,663,265,668,263,669,263,676,271,689,273,
-	694,274,700,278,704,278,712,275,711,276,716,274,717,273,721,270,722,267,722,267,726,262,725,262,730,254,730,251,728,
-	249,725,245,718,244,714,241,713,241,711,242,704,238,696,237,691,238,685,237,679,237,672,239,667,239,661,238,656" 
-	href="#" /> <!--Image coordinates for the feet-->
-	
-</map>
-<div style="width:1000px; height:120px; font-size:14px; position: relative; top: -800px; left: 400px; font-weight:bold; font-family: FontAwesome; text-align: justify; line-height: 16px;"> <!--The size, position of the acutal app-->
-    <div id="body-caption" style="clear:both; border: 2px solid black; width: 600px; height: 800px; padding: 10px; display:none; ">
-        <div id="body-caption-header" style="text-decoration: underline; margin-bottom: 10px; font-size:18px"></div>
-        <div id="body-caption-text"></div>
-    </div></div>
-
-
-
-<script>
-$('img').mapster(); //Calling image mapster script
-
-var inArea, //When moving mouse over to these body parts, its contents including description and audio will show up 
-    map = $('#body'),
-    captions = {
-        heart: ["Heart and Brain",
-			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">" //Links to audio
-			+"<source type=\"audio/ogg\" src=\"Audio/Heart.ogg\">"
-			+"Sorry, your browser does not support HTML5 audio." //Show up only if the browser does not support HTML5 audio
-			+"</audio> <br></br>Your heart is really a muscle. It’s located a little to the left of the middle of your "
-			+"chest, and it’s about the size of your fist. There are lots of muscles all over your body – in your "
-			+"arms, in your legs, in your back, even in your bottom. The heart muscle is special because of what it "
-			+"does. The heart sends blood around your body. The blood provides your body with the oxygen and nutrients "
-			+"it needs. It also carries away waste and sends this to the kidneys. Most kids are born with a healthy "
-			+"heart and it’s important to keep yours in good shape. <br></br>Living with type 1 diabetes can sometimes affect "
-			+"your heart as having high blood glucose levels for a long time can cause the risk of narrowing blood "
-			+"vessels that are important in moving blood around the body to become a lot higher. This can lower the "
-			+"blood flow to the heart and brain. With narrower blood vessels and higher blood glucose levels that make "
-			+"the blood sticky, the risk of blockage increases and you can be put at a risk of heart disease and stroke. "
-			+"These effects can be reduced by following your diabetes management plan as recommended by your diabetes team. "
-			+"Discuss with your diabetes team for any further concerns."
-			+ "<br></br><img src=\"images/nerves.jpg\">"],
-			
-			
-        kidney: ["Kidneys",
-			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
-			+"<source type=\"audio/ogg\" src=\"Audio/Kidneys.ogg\">"
-			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
-			+"Your kidneys are two of the most important organs in your body. They filter your blood and help "
-			+"get rid of waste products from your body. Each kidney is about the size of a mobile phone. They "
-			+"have an unusual shape – kidney beans are named after them because they have the same shape. Inside "
-			+"each kidney there are about a million nephrons. They are tiny filters catching all the stuff that "
-			+"your body doesn’t need and is sending out as waste. The kidneys do several important jobs which help "
-			+"to keep your body working well. <ul><br><li>1. They get rid of waste products carried in the blood. The "
-			+"kidneys are part of the waste disposal team. They check out the minerals, vitamins and other nutrients "
-			+"that you get from your food and send off into urine anything that is not needed. They make urine, send "
-			+"it down to the bladder through tubes called the ureters, and when the bladder feels full enough, the "
-			+"brain sends you off to the toilet to get rid of the urine. </li><br> <li>2. They balance the volume of fluid "
-			+"in the body. Adults have around 7-8 litres of fluid in the body, children have slightly less depending "
-			+"on their size. All of this gets filtered through the kidneys many times a day. If the volume of fluid in "
-			+"your body goes down (maybe you are sweating out a lot of fluid through your skin or maybe you are not "
-			+"drinking enough water), the kidneys will not make much urine until the amount of fluid in your body goes "
-			+"up.</li><br><li>3. They can change blood pressure. The kidneys make a hormone that can constrict (make "
-			+"narrower) the arteries in the body. This causes blood pressure to rise when a higher pressure is needed "
-			+"to make sure that blood gets to all parts of your body. </li><br><li> 4. They help in making red blood cells. "
-			+"The kidneys make a hormone that tells the body when to make more red blood cells. </li><br> <li>5. They produce "
-			+"vitamin D. This vitamin helps the body to absorb calcium from dairy products and some other foods that you "
-			+"eat. Calcium is needed to make strong bones and teeth. </li></ul>High Blood Glucose Levels (BGL’s) place extra pressure "
-			+"on the filters which can cause them to leak reusable nutrients (things that the body need to function) like "
-			+"protein. This can affect the kidney functions in a bad way and may even lead to kidneys not working properly, "
-			+"if at all. Your diabetes specialist will order urine tests to see if your kidneys are working properly as part "
-			+"of your diabetes screening tests. Don’t forget to ask for the results during your clinic visit and discuss "
-			+"further concerns with your diabetes health care professional."],
-			
-        feet: ["Nerves in the Feet",
-			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
-			+"<source type=\"audio/ogg\" src=\"Audio/Nerves.ogg\">"
-			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
-            +"You might wonder about nerves, which you can’t see without a microscope. What are they anyway? The nervous "
-			+"system is made up of millions and millions of neurons which are microscopic cells. Each neuron has tiny "
-			+"branches coming off it that let it connect to many other neurons. When you were born, your brain came with "
-			+"all the neurons it will ever have, but many of them were not connected to each other. When you learn things, "
-			+"the messages travel from one neuron to another, over and over. Eventually, the brain starts to create connection "
-			+"(or pathways) between neurons, so things become easier and you can do them better and better. <br></br>Like the eyes, "
-			+"kidneys, heart and brain, the nerves can be affected by high blood glucose levels. Thicker, stickier blood can "
-			+"damage the walls of the small blood vessels that feed the nerves, especially in the legs. This can cause tingling, "
-			+"numbness, a burning sensation and/or pain. But! This is the bad news! The good news is that it doesn’t have to be "
-			+"this way! Keeping blood glucose levels as near to the target of 4-8 mmol/L and having regular contact with your "
-			+"diabetes team to make sure all screening is done will help to reduce the risk of nerve damage and these symptoms. "
-			+"Discuss with your diabetes health care professional if you have any concerns."],
+						
+		<map name="body-map">
 		
-		eye: ["Eyes",
-			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
-			+"<source type=\"audio/ogg\" src=\"Audio/Eyes.ogg\">"
-			+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
-            +"Sight, more than any of our senses, helps us navigate the world around us. In a single glance, "
-			+"lasting a fraction of a second, our eyes work with our brains to tell us the size, shape, colour, "
-			+"and texture of an object. They let us know how close it is, whether it’s standing still or coming "
-			+"toward us, and how quickly it’s moving. <br></br> The eyes are small compared with most organs, "
-			+"but their structure is incredibly complex. They work together to perceive depth, enabling us to "
-			+"judge distance and the size of objects to help us move around them. They also work with the brain, "
-			+"muscles, and nerves to produce complicated visual images and messages. They also constantly adapt "
-			+"to the changing environment – for example, adjusting so that we can easily move around in a nearly "
-			+"dark room or bright sunlight. <br></br>To understand how the eyes work, it’s important to know about "
-			+"their structure and about conditions and diseases that can interfere with vision. <br></br> Light passes through "
-			+"the cornea and the pupil and then passes through the lens, helping to focus the light onto the retina, "
-			+"which is located at the back of the eye. The cells in the retina detect the light and form a focused "
-			+"image which is then sent to the brain by the optic nerve. The macula is a small, specialised area on the "
-			+"retina that helps the eyes see fine details when we look directly at an object. High blood glucose levels "
-			+"can cause damage to the blood vessels of the retina which can then affect vision. A review with the eye "
-			+"specialist every two years is important to get your eyes checked for any problems. Ask for the results of"
-			+"the tests in your next clinic and discuss any concerns you have with you diabetes health care professional."],
-    },
-	
-	
-    single_opts = { //single_opts' for single selected area, RED border
-		isSelectable: true,
-		singleSelect : true,
-		fill : true, 
-		altImage : 'images/body4.gif',
-		fillOpacity : 1,
-        fillColor: '000000',
-        fillOpacity: 0,
-        stroke: true,
-        strokeColor: 'ff0000',
-        strokeWidth: 2
-		
-    },
-    all_opts = { //all_opts' for highlight all, shaded WHITE with WHITE border
-		isSelectable: true,
-		singleSelect : true,
-		render_highlight : { altImage : 'images/body2.gif'},
-		fill : true, 
-        fillColor: 'ffffff',
-        fillOpacity: 1,
-		stroke: true,
-        strokeWidth: 1.5,
-        strokeColor: 'ffffff',
-    },
-    initial_opts = { // 'initial_opts' for general options that apply to the whole mapster. 
-                     // 'initial_opts' also includes callbacks
-        mapKey: 'data-name',
-        isSelectable: true,
-		singleSelect : true,
-		fillOpacity : 1,
-		
-        onMouseover: function (data) {
-            inArea = true;
-            
-			$('#body-caption-header').html(captions[data.key][0]);
-			$('#body-caption-text').html(captions[data.key][1]);
-            $('#body-caption').show();
+			<area shape="poly" data-name="heart,all" coords="239,225,215,216,209,213,205,208,203,207,202,204,201,197,202,191,
+			205,188,211,181,208,179,198,180,198,177,207,176,200,168,202,166,211,172,215,172,216,170,206,162,209,159,212,161,
+			213,156,216,155,216,160,217,164,220,168,225,167,225,156,225,154,229,154,229,160,234,154,237,158,233,163,231,167,
+			236,174,248,172,249,174,236,177,249,179,249,182,236,181,236,185,240,186,242,191,242,194,245,200,247,208,247,217,244,
+			222"  href="#" /> <!--Image coordinates for the heart-->
 			
-        },
-        onMouseout: function (data) {
-            inArea = false;  
-        },
+			<area shape="poly" data-name="eye,all" coords="238,60,244,62,247,65,243,67,237,68,233,67,232,64,235,61" href="#" /> <!--Image coordinates for the eye-->
 			
-    };
-    opts = $.extend({}, all_opts, initial_opts, single_opts);
-    // Bind to the image 'mouseover' and 'mouseout' events to activate or deactivate ALL the areas.
-    // Check whether an area has been activated with "inArea"
-    map.mapster('unbind')
-        .mapster(opts)
-        .bind('mouseover', function () {
-            if (!inArea) {
-                map.mapster('set_options', all_opts)
-                    .mapster('set', true, 'all')
-                    .mapster('set_options', single_opts);
-            }
-        }).bind('mouseout', function () {
-            if (!inArea) {
-                map.mapster('set', false, 'all')
-				.mapster('set_options', all_opts);
-            }
-        });
-</script>
-</div>
+			<area shape="poly" data-name="eye,all" coords="209,68,213,67,214,63,211,60,207,59,204,61,200,64,204,67" href="#" /> <!--Image coordinates for the eye-->
+			
+			<area shape="poly" data-name="kidney,all" coords="202,257,205,254,208,248,205,241,200,239,193,239,189,241,184,246,
+			181,251,178,257,178,264,180,269,181,275,184,280,190,284,194,285,199,285,203,283,207,276,208,270,206,266,204,262"
+			href="#" /> <!--Image coordinates for the kidney-->
+			
+			<area shape="poly" data-name="kidney,all" coords="247,257,243,263,240,270,241,276,244,281,251,285,259,284,263,280,
+			268,274,269,267,269,257,265,248,261,242,254,239,247,239,242,243,241,250,245,255" href="#" /> <!--Image coordinates for the kidney-->
+			
+			<area shape="poly" data-name="feet,all" coords="181,653,203,651,205,655,205,668,208,675,206,683,206,691,206,697,203
+			,705,202,711,200,718,196,728,191,730,187,730,185,729,182,728,180,727,177,723,175,722,172,719,169,717,170,711,168,
+			708,169,701,173,690,177,683,179,678,181,677,181,668,179,668,180,662" href="#" /> <!--Image coordinates for the feet-->
+			
+			<area shape="poly" data-name="feet,all" coords="241,651,262,652,264,657,264,663,265,668,263,669,263,676,271,689,273,
+			694,274,700,278,704,278,712,275,711,276,716,274,717,273,721,270,722,267,722,267,726,262,725,262,730,254,730,251,728,
+			249,725,245,718,244,714,241,713,241,711,242,704,238,696,237,691,238,685,237,679,237,672,239,667,239,661,238,656" 
+			href="#" /> <!--Image coordinates for the feet-->
+			
+		</map>
+		<div style="width:1000px; height:120px; font-size:14px; position: relative; top: -740px; left: 400px; font-weight:bold; 
+			font-family: FontAwesome; text-align: justify; line-height: 16px;"> 
+			
+			<div id="body-caption" style="clear:both; width: 460px; height: 800px; padding: 10px; display:none; ">
+			<!--The size, position of the actual app-->
+				<div id="body-caption-header" style="text-decoration: underline; margin-bottom: 10px; font-size:18px"></div>
+				<div id="body-caption-text"></div>
+			</div></div>
+
+
+
+		<script>
+		$('img').mapster(); //Calling image mapster script
+
+		var inArea, //When moving mouse over to these body parts, its contents including description and audio will show up 
+			map = $('#body'),
+			captions = {
+				heart: ["Heart and Brain",
+					"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">" //Links to audio
+					+"<source type=\"audio/ogg\" src=\"Audio/Heart.ogg\">"
+					+"Sorry, your browser does not support HTML5 audio." //Show up only if the browser does not support HTML5 audio
+					+"</audio> <br></br>Your heart is really a muscle. It’s located a little to the left of the middle of your "
+					+"chest, and it’s about the size of your fist. There are lots of muscles all over your body – in your "
+					+"arms, in your legs, in your back, even in your bottom. The heart muscle is special because of what it "
+					+"does. The heart sends blood around your body. The blood provides your body with the oxygen and nutrients "
+					+"it needs. It also carries away waste and sends this to the kidneys. Most kids are born with a healthy "
+					+"heart and it’s important to keep yours in good shape. <br></br>Living with type 1 diabetes can sometimes affect "
+					+"your heart as having high blood glucose levels for a long time can cause the risk of narrowing blood "
+					+"vessels that are important in moving blood around the body to become a lot higher. This can lower the "
+					+"blood flow to the heart and brain. With narrower blood vessels and higher blood glucose levels that make "
+					+"the blood sticky, the risk of blockage increases and you can be put at a risk of heart disease and stroke. "
+					+"These effects can be reduced by following your diabetes management plan as recommended by your diabetes team. "
+					+"Discuss with your diabetes team for any further concerns."],
+					
+					
+				kidney: ["Kidneys",
+					"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+					+"<source type=\"audio/ogg\" src=\"Audio/Kidneys.ogg\">"
+					+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+					+"Your kidneys are two of the most important organs in your body. They filter your blood and help "
+					+"get rid of waste products from your body. Each kidney is about the size of a mobile phone. They "
+					+"have an unusual shape – kidney beans are named after them because they have the same shape. Inside "
+					+"each kidney there are about a million nephrons. They are tiny filters catching all the stuff that "
+					+"your body doesn’t need and is sending out as waste. The kidneys do several important jobs which help "
+					+"to keep your body working well. <br><br>1. They get rid of waste products carried in the blood. The "
+					+"kidneys are part of the waste disposal team. They check out the minerals, vitamins and other nutrients "
+					+"that you get from your food and send off into urine anything that is not needed. They make urine, send "
+					+"it down to the bladder through tubes called the ureters, and when the bladder feels full enough, the "
+					+"brain sends you off to the toilet to get rid of the urine. <br>2. They balance the volume of fluid "
+					+"in the body. Adults have around 7-8 litres of fluid in the body, children have slightly less depending "
+					+"on their size. All of this gets filtered through the kidneys many times a day. If the volume of fluid in "
+					+"your body goes down (maybe you are sweating out a lot of fluid through your skin or maybe you are not "
+					+"drinking enough water), the kidneys will not make much urine until the amount of fluid in your body goes "
+					+"up.<br>3. They can change blood pressure. The kidneys make a hormone that can constrict (make "
+					+"narrower) the arteries in the body. This causes blood pressure to rise when a higher pressure is needed "
+					+"to make sure that blood gets to all parts of your body. <br>4. They help in making red blood cells. "
+					+"The kidneys make a hormone that tells the body when to make more red blood cells. <br>5. They produce "
+					+"vitamin D. This vitamin helps the body to absorb calcium from dairy products and some other foods that you "
+					+"eat. Calcium is needed to make strong bones and teeth.<br><br>High Blood Glucose Levels (BGL’s) place extra pressure "
+					+"on the filters which can cause them to leak reusable nutrients (things that the body need to function) like "
+					+"protein. This can affect the kidney functions in a bad way and may even lead to kidneys not working properly, "
+					+"if at all. Your diabetes specialist will order urine tests to see if your kidneys are working properly as part "
+					+"of your diabetes screening tests. Don’t forget to ask for the results during your clinic visit and discuss "
+					+"further concerns with your diabetes health care professional."],
+					
+				feet: ["Nerves in the Feet",
+					"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+					+"<source type=\"audio/ogg\" src=\"Audio/Nerves.ogg\">"
+					+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+					+"You might wonder about nerves, which you can’t see without a microscope. What are they anyway? The nervous "
+					+"system is made up of millions and millions of neurons which are microscopic cells. Each neuron has tiny "
+					+"branches coming off it that let it connect to many other neurons. When you were born, your brain came with "
+					+"all the neurons it will ever have, but many of them were not connected to each other. When you learn things, "
+					+"the messages travel from one neuron to another, over and over. Eventually, the brain starts to create connection "
+					+"(or pathways) between neurons, so things become easier and you can do them better and better. <br></br>Like the eyes, "
+					+"kidneys, heart and brain, the nerves can be affected by high blood glucose levels. Thicker, stickier blood can "
+					+"damage the walls of the small blood vessels that feed the nerves, especially in the legs. This can cause tingling, "
+					+"numbness, a burning sensation and/or pain. But! This is the bad news! The good news is that it doesn’t have to be "
+					+"this way! Keeping blood glucose levels as near to the target of 4-8 mmol/L and having regular contact with your "
+					+"diabetes team to make sure all screening is done will help to reduce the risk of nerve damage and these symptoms. "
+					+"Discuss with your diabetes health care professional if you have any concerns."
+					+ "<br></br><img src=\"images/nerves.jpg\">"],
+				
+				eye: ["Eyes",
+					"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+					+"<source type=\"audio/ogg\" src=\"Audio/Eyes.ogg\">"
+					+"Sorry, your browser does not support HTML5 audio.</audio> <br></br>"
+					+"Sight, more than any of our senses, helps us navigate the world around us. In a single glance, "
+					+"lasting a fraction of a second, our eyes work with our brains to tell us the size, shape, colour, "
+					+"and texture of an object. They let us know how close it is, whether it’s standing still or coming "
+					+"toward us, and how quickly it’s moving. <br></br> The eyes are small compared with most organs, "
+					+"but their structure is incredibly complex. They work together to perceive depth, enabling us to "
+					+"judge distance and the size of objects to help us move around them. They also work with the brain, "
+					+"muscles, and nerves to produce complicated visual images and messages. They also constantly adapt "
+					+"to the changing environment – for example, adjusting so that we can easily move around in a nearly "
+					+"dark room or bright sunlight. <br></br>To understand how the eyes work, it’s important to know about "
+					+"their structure and about conditions and diseases that can interfere with vision. <br></br> Light passes through "
+					+"the cornea and the pupil and then passes through the lens, helping to focus the light onto the retina, "
+					+"which is located at the back of the eye. The cells in the retina detect the light and form a focused "
+					+"image which is then sent to the brain by the optic nerve. The macula is a small, specialised area on the "
+					+"retina that helps the eyes see fine details when we look directly at an object. High blood glucose levels "
+					+"can cause damage to the blood vessels of the retina which can then affect vision. A review with the eye "
+					+"specialist every two years is important to get your eyes checked for any problems. Ask for the results of"
+					+"the tests in your next clinic and discuss any concerns you have with you diabetes health care professional."],
+			},
+			
+			
+			single_opts = { //single_opts' for single selected area
+				isSelectable: true,
+				singleSelect : true,
+				fill : true, 
+				altImage : 'images/body4.gif',
+				fillOpacity : 1,
+				fillColor: '000000',
+				fillOpacity: 0,
+				stroke: true,
+				strokeColor: 'ff0000',
+				strokeWidth: 2,
+				
+			},
+			all_opts = { //all_opts' for highlight all, shaded WHITE with WHITE border
+				isSelectable: true,
+				singleSelect : true,
+				render_highlight : { altImage : 'images/body2.gif'},
+				fill : true, 
+				fillColor: 'ffffff',
+				fillOpacity: 1,
+				stroke: true,
+				strokeWidth: 2,
+				strokeColor: 'ffffff',
+			},
+			initial_opts = { // 'initial_opts' for general options that apply to the whole mapster. 
+							 // 'initial_opts' also includes callbacks
+				mapKey: 'data-name',
+				isSelectable: true,
+				singleSelect : true,
+				fillOpacity : 1,
+				
+				onMouseover: function (data) { //creates the caption box to the side retrieving the correct text
+					inArea = true;
+					
+					$('#body-caption-header').html(captions[data.key][0]);
+					$('#body-caption-text').html(captions[data.key][1]);
+					$('#body-caption').show();
+					
+				},
+				onMouseout: function (data) {
+					inArea = false;  
+				},
+					
+			};
+			opts = $.extend({}, all_opts, initial_opts, single_opts);
+			// Bind to the image 'mouseover' and 'mouseout' events to activate or deactivate ALL the areas.
+			// Check whether an area has been activated with "inArea"
+			map.mapster('unbind')
+				.mapster(opts)
+				.bind('mouseover', function () {
+					if (!inArea) {
+						map.mapster('set_options', all_opts)
+							.mapster('set', true, 'all')
+							.mapster('set_options', single_opts); //highlight single object
+					}
+				}).bind('mouseout', function () {
+					if (!inArea) {
+						map.mapster('set', false, 'all')
+						.mapster('set_options', all_opts); //highlight all objects on mouse out
+					}
+				});
+		</script>
+		</div>
 <!--
     <audio id="audio" preload="auto" tabindex="0" controls type="audio/ogg">
         <source type="audio/ogg" src="Audio/Heart.ogg">
