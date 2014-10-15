@@ -2,7 +2,7 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
 
 /* Basic */
-	.customDiv {
+	.customDiv { /* Style of pop up button linked to management and control section */
 		display: none;
 		position: fixed;
 		top: 40%;
@@ -54,11 +54,11 @@
 		font-weight: 400;
 	}
 
-	p, ul, ol, dl, table, blockquote {
+	p, ul, ol, dl, table, blockquote { /* Style of the table class */
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6 { /* Style of the header class */
 		color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;

@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<title>Living with Diabetes</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />  <!--Define charset for content-->
+		<meta name="description" content="" />  <!--There is no description for web page-->
+		<meta name="keywords" content="" />    <!--There is no keywords for search engine-->
+		<meta name="viewport" content="width=device-width"> <!--The browser will (probably) render the width of the page at the width of its own screen. So if that screen is 320px wide, the browser window will be 320px wide, rather than way zoomed out and showing 960px-->
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
         <script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
@@ -15,7 +15,8 @@
 		<script src="js/skel-layers.min.js"></script>
         <script src="js/init.js"></script>		
 		<script type="text/javascript">
-function MM_preloadImages() { //v3.0
+
+function MM_preloadImages() { //v3.0   <!--This is a well known piece of code that is auto-genereated by the wizard in Dreamweaver. Typically the MM_preloadImages function is called from the <body> tag to make sure that rollover images for buttons are preloaded. If those images are not preloaded then rollover effects can be compromised.-->
  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
@@ -67,7 +68,7 @@ function MM_preloadImages() { //v3.0
 					<p><strong>An interactive tool for educational purposes</strong></p>
 					<footer>
 						<ul class="buttons vertical">
-							<li><a href="#main" class="button fit scrolly">Let's Get Started!</a></li>
+							<li><a href="#main" class="button fit scrolly">Let's Get Started!</a></li> <!--Add button with scroll animation link to the next header-->
 						</ul>
 					</footer>
 				
@@ -137,7 +138,7 @@ function MM_preloadImages() { //v3.0
 					<section class="wrapper style1 container special">
 					<h2>Symptoms of Diabetes</h2>
 					<br>
-						<div class="row">
+						<div class="row"> <!--Create a row division that has 6 icons with title explaining the symptoms of diabetes-->
 							<div class="4u">
 							
 								<section>
@@ -212,20 +213,20 @@ function MM_preloadImages() { //v3.0
                 
                 <div class='customDiv'>
 							<a href="#mgmt_ctrl" class="button fit scrolly">Continue to<br>Management<br>and Control</a>
-						</div>
+						</div> <!-- Pop up button linked to management and control section (only when mouse moves over to the app) -->
                 
-<script>
-var startY = $('header').position().top + $('header').outerHeight();
+<script> //Scroll function (this support the pop up button)
+var startY = $('header').position().top + $('header').outerHeight(); //Get the headers position from the top of the page, plus its own height
 
 $(window).scroll(function(){
     checkY();
 });
 
 function checkY(){
-    if( ($(window).scrollTop() > 2800) && ($(window).scrollTop() < 3800) ){
-        $('.customDiv').slideDown();
+    if( ($(window).scrollTop() > 2800) && ($(window).scrollTop() < 3800) ){ //Checking the area of the app 
+        $('.customDiv').slideDown(); //Pop up button moves down
     }else{
-        $('.customDiv').slideUp();
+        $('.customDiv').slideUp();   //Pop up button moves up
     }
 }
 </script>
@@ -240,41 +241,41 @@ function checkY(){
 						<div>
 						  <p>Having high blood glucose levels for a long period of time can increase the risk of the following health concerns. Click on a body part to discover more.</p>
 						  <p>&nbsp;</p>
-						<img id="body" src="images/body.gif"  usemap="#body-map">
+						<img id="body" src="images/body.gif"  usemap="#body-map"> <!--Links to body app-->
 <map name="body-map">
     <area shape="poly" data-name="heart,all" coords="239,225,215,216,209,213,205,208,203,207,202,204,201,197,202,191,
 	205,188,211,181,208,179,198,180,198,177,207,176,200,168,202,166,211,172,215,172,216,170,206,162,209,159,212,161,
 	213,156,216,155,216,160,217,164,220,168,225,167,225,156,225,154,229,154,229,160,234,154,237,158,233,163,231,167,
 	236,174,248,172,249,174,236,177,249,179,249,182,236,181,236,185,240,186,242,191,242,194,245,200,247,208,247,217,244,
-	222"  href="#" />
+	222"  href="#" /> <!--Image coordinates for the heart-->
 	
     <area shape="poly" data-name="heart,all" coords="212,72,215,75,220,75,229,76,234,70,236,69,231,69,231,65,231,62,
 	235,60,241,60,246,63,247,65,249,61,254,54,251,49,252,44,250,39,248,35,240,27,238,26,236,23,233,23,231,23,226,21,
 	223,22,223,26,221,22,211,25,205,27,202,27,199,30,198,33,196,35,195,43,194,51,196,58,196,62,202,61,205,59,208,57,
-	211,60,213,61,214,63,214,66,210,69" href="#" />
+	211,60,213,61,214,63,214,66,210,69" href="#" /> <!--Image coordinates for the heart-->
 	
-	<area shape="poly" data-name="eye,all" coords="238,60,244,62,247,65,243,67,237,68,233,67,232,64,235,61" href="#" />
+	<area shape="poly" data-name="eye,all" coords="238,60,244,62,247,65,243,67,237,68,233,67,232,64,235,61" href="#" /> <!--Image coordinates for the eye-->
 	
-	<area shape="poly" data-name="eye,all" coords="209,68,213,67,214,63,211,60,207,59,204,61,200,64,204,67" href="#" />
+	<area shape="poly" data-name="eye,all" coords="209,68,213,67,214,63,211,60,207,59,204,61,200,64,204,67" href="#" /> <!--Image coordinates for the eye-->
 	
     <area shape="poly" data-name="kidney,all" coords="202,257,205,254,208,248,205,241,200,239,193,239,189,241,184,246,
 	181,251,178,257,178,264,180,269,181,275,184,280,190,284,194,285,199,285,203,283,207,276,208,270,206,266,204,262"
-	href="#" />
+	href="#" /> <!--Image coordinates for the kidney-->
 	
 	<area shape="poly" data-name="kidney,all" coords="247,257,243,263,240,270,241,276,244,281,251,285,259,284,263,280,
-	268,274,269,267,269,257,265,248,261,242,254,239,247,239,242,243,241,250,245,255" href="#" />
+	268,274,269,267,269,257,265,248,261,242,254,239,247,239,242,243,241,250,245,255" href="#" /> <!--Image coordinates for the kidney-->
 	
     <area shape="poly" data-name="feet,all" coords="181,653,203,651,205,655,205,668,208,675,206,683,206,691,206,697,203
 	,705,202,711,200,718,196,728,191,730,187,730,185,729,182,728,180,727,177,723,175,722,172,719,169,717,170,711,168,
-	708,169,701,173,690,177,683,179,678,181,677,181,668,179,668,180,662" href="#" />
+	708,169,701,173,690,177,683,179,678,181,677,181,668,179,668,180,662" href="#" /> <!--Image coordinates for the feet-->
 	
 	<area shape="poly" data-name="feet,all" coords="241,651,262,652,264,657,264,663,265,668,263,669,263,676,271,689,273,
 	694,274,700,278,704,278,712,275,711,276,716,274,717,273,721,270,722,267,722,267,726,262,725,262,730,254,730,251,728,
 	249,725,245,718,244,714,241,713,241,711,242,704,238,696,237,691,238,685,237,679,237,672,239,667,239,661,238,656" 
-	href="#" />
+	href="#" /> <!--Image coordinates for the feet-->
 	
 </map>
-<div style="width:1000px; height:120px; font-size:14px; position: relative; top: -800px; left: 400px; font-weight:bold; font-family: FontAwesome; text-align: justify; line-height: 16px;">
+<div style="width:1000px; height:120px; font-size:14px; position: relative; top: -800px; left: 400px; font-weight:bold; font-family: FontAwesome; text-align: justify; line-height: 16px;"> <!--The size, position of the acutal app-->
     <div id="body-caption" style="clear:both; border: 2px solid black; width: 600px; height: 800px; padding: 10px; display:none; ">
         <div id="body-caption-header" style="text-decoration: underline; margin-bottom: 10px; font-size:18px"></div>
         <div id="body-caption-text"></div>
@@ -283,15 +284,15 @@ function checkY(){
 
 
 <script>
-$('img').mapster();
+$('img').mapster(); //Calling image mapster script
 
-var inArea,
+var inArea, //When moving mouse over to these body parts, its contents including description and audio will show up 
     map = $('#body'),
     captions = {
         heart: ["Heart and Brain",
-			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">"
+			"<audio id=\"audio\" preload=\"auto\" tabindex=\"0\" controls type=\"audio/ogg\">" //Links to audio
 			+"<source type=\"audio/ogg\" src=\"Audio/Heart.ogg\">"
-			+"Sorry, your browser does not support HTML5 audio."
+			+"Sorry, your browser does not support HTML5 audio." //Show up only if the browser does not support HTML5 audio
 			+"</audio> <br></br>Your heart is really a muscle. It’s located a little to the left of the middle of your "
 			+"chest, and it’s about the size of your fist. There are lots of muscles all over your body – in your "
 			+"arms, in your legs, in your back, even in your bottom. The heart muscle is special because of what it "
@@ -378,7 +379,7 @@ var inArea,
     },
 	
 	
-    single_opts = {
+    single_opts = { //single_opts' for single selected area, RED border
 		isSelectable: true,
 		singleSelect : true,
 		fill : true, 
@@ -391,7 +392,7 @@ var inArea,
         strokeWidth: 2
 		
     },
-    all_opts = {
+    all_opts = { //all_opts' for highlight all, shaded WHITE with WHITE border
 		isSelectable: true,
 		singleSelect : true,
 		render_highlight : { altImage : 'images/body2.gif'},
@@ -402,7 +403,8 @@ var inArea,
         strokeWidth: 1.5,
         strokeColor: 'ffffff',
     },
-    initial_opts = {
+    initial_opts = { // 'initial_opts' for general options that apply to the whole mapster. 
+                     // 'initial_opts' also includes callbacks
         mapKey: 'data-name',
         isSelectable: true,
 		singleSelect : true,
@@ -422,8 +424,8 @@ var inArea,
 			
     };
     opts = $.extend({}, all_opts, initial_opts, single_opts);
-
-
+    // Bind to the image 'mouseover' and 'mouseout' events to activate or deactivate ALL the areas.
+    // Check whether an area has been activated with "inArea"
     map.mapster('unbind')
         .mapster(opts)
         .bind('mouseover', function () {
@@ -496,7 +498,7 @@ function run(link, player){
 								<footer>
 								<p>Below are some management tips to assist you in taking charge of your diabetes and improving your health.</p>
 									<ul class="buttons">
-										<li><a href="#mgmt_ctrl" class="button fit scrolly">How do I manage and Control it?</a></li>
+										<li><a href="#mgmt_ctrl" class="button fit scrolly">How do I manage and Control it?</a></li> <!--Add button with scroll animation links to the next header-->
 									</ul>
 								</footer>
 					</section>
@@ -506,7 +508,7 @@ function run(link, player){
 				<!-- Four -->
                 <article id="mgmt_ctrl">
 				<section class="wrapper style1 container special">
-				
+				<!-- Management & Control section detail goes here -->
 					<h2>Management & Control</h2>
 					<div class="11u">
 					<br>
@@ -618,7 +620,7 @@ Planning ahead is also crucial, as unexpected hypoglycaemic events can occur. Sm
 				</header>
 				<footer>
 					<ul class="buttons">
-						<li><a href="#" class="button special">↑ &nbsp; Return to Top &nbsp;↑</a></li>
+						<li><a href="#" class="button special">↑ &nbsp; Return to Top &nbsp;↑</a></li> <!--Add button linked to the top of the web page-->
 						<li></li>
 					</ul>
 				</footer>
@@ -628,10 +630,10 @@ Planning ahead is also crucial, as unexpected hypoglycaemic events can occur. Sm
 		<!-- Footer -->
 			<footer id="footer">
 			
-				<ul class="icons">
+				<ul class="icons"> <!--The first 2 incons link to facebook and twitter site of PMH-->
 					<li><a href="https://twitter.com/PMHFoundationWA" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="https://www.facebook.com/PMHFoundation" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-                     
+                     <!--The last icon links to google map that shows the location of PMH-->
                     <li><a href="https://www.google.com.au/maps/preview?ie=UTF-8&fb=1&gl=au&sll=-31.946264,115.837045&sspn=0.0279676,0.0439464&cid=18014188331318922031&q=Princess+Margaret+Hospital+for+Children&ei=GcYFVKCBEtScugTlsoC4Aw&ved=0CKMBEPwSMAo" class="icon circle fa-map-marker"><span class="label">Location</span></a></li>
                     
 					<li></li>
