@@ -458,59 +458,6 @@ function checkY(){
 				});
 		</script>
 		</div>
-<!--
-    <audio id="audio" preload="auto" tabindex="0" controls type="audio/ogg">
-        <source type="audio/ogg" src="Audio/Heart.ogg">
-        Sorry, your browser does not support HTML5 audio.
-    </audio>
-    <ul id="playlist">
-        <li class="active"><a href="Audio/Heart.ogg">The Heart</a></li>
-        <li><a href="Audio/Eyes.ogg">The Eyes</a></li>
-        <li><a href="Audio/Kidneys.ogg">The Kidneys</a></li>
-        <li><a href="Audio/Nerves.ogg">The Nerves</a></li>
-
-    </ul>
-    <script>
-var audio;
-var playlist;
-var tracks;
-var current;
-
-init();
-function init(){
-    current = 0;
-    audio = $('audio');
-    playlist = $('#playlist');
-    tracks = playlist.find('li a');
-    len = tracks.length - 1;
-    audio[0].volume = .10;
-    audio[0].play();
-    playlist.find('a').click(function(e){
-        e.preventDefault();
-        link = $(this);
-        current = link.parent().index();
-        run(link, audio[0]);
-    });
-    audio[0].addEventListener('ended',function(e){
-        current++;
-        if(current == len){
-            current = 0;
-            link = playlist.find('a')[0];
-        }else{
-            link = playlist.find('a')[current];    
-        }
-        run($(link),audio[0]);
-    });
-}
-function run(link, player){
-        player.src = link.attr('href');
-        par = link.parent();
-        par.addClass('active').siblings().removeClass('active');
-        audio[0].load();
-        audio[0].play();
-}
-</script>
--->
 								<footer>
 								<p>Below are some management tips to assist you in taking charge of your diabetes and improving your health.</p>
 									<ul class="buttons">
