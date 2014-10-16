@@ -41,7 +41,9 @@ The interactive webpage relies on these folders in order to work. Deleting or mo
 	Usage
 ================
 
-The files and folders must be first extracted to an appropriate directory before opening the webpage.
 If Google Chrome or Firefox is set as your default browser, simply double click the "Index.html", to open the webpage.
 If Internet Explorer is currently set as your default browser, right-click "Index.html" and go to "Open with", then select either Google Chrome or Firefox.
 
+To bookmark the page in Google Chrome, either click the star, located on the right of the address bar, or press "Ctrl" and "D" on your keyboard.
+A link to the interactive wepbage, will now appear in the bookmark bar upon opening a blank tab.
+The bookmark bar can be made visible by pressing "Ctrl" "Shift" "B" on your keyboard.

@@ -1,4 +1,4 @@
-First extract the folders and files into an appropriate directory.
+First extract the folders and files from the zip archive, into an appropriate directory.
 
 The webpage can be opened as a standalone page, that is stored locally on a computer, or can be hosted on a website.
 
