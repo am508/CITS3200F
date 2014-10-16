@@ -1,5 +1,6 @@
-In order to view the interactive webpage, double click the "Index.html". 
-This website can be opened as a standalone page, that is stored locally on a computer, or can be hosted on a website.
+First extract the folders and files into an appropriate directory.
+
+The webpage can be opened as a standalone page, that is stored locally on a computer, or can be hosted on a website.
 
 This webpage is best viewed on a computer that has either the latest version of Google Chrome or Mozilla Firefox installed.
 
@@ -8,6 +9,9 @@ https://www.google.com/chrome/
 
 You can download Mozilla Firefox from:
 https://www.mozilla.org/en-US/firefox/new/
+
+If Google Chrome or Firefox is set as your default browser, simply double click the "Index.html", to open the webpage.
+If Internet Explorer is currently set as your default browser, right-click "Index.html" and go to "Open with", then select either Google Chrome or Firefox.
 
 For correct viewing, the minimum screen resolution, of the computer monitor, must be at least 1024x768 or greater. 
 For optimal viewing, It is recommended that the computer screen resolution be set to at least 1280x800 or greater.

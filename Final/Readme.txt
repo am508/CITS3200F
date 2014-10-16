@@ -29,6 +29,11 @@ This directory should contain the following folders:
 
 And the following file, which forms the webpage:
 	- index.html
+
+Included information files are:
+	- Readme.txt
+	- Install.txt
+	- HTML report.docx
  
 The interactive webpage relies on these folders in order to work. Deleting or moving any files within these folders will cause certain elements in the webpage not to load.
  
@@ -36,5 +41,7 @@ The interactive webpage relies on these folders in order to work. Deleting or mo
 	Usage
 ================
 
-In order to view the webpage, double click the "Index.html". 
+The files and folders must be first extracted to an appropriate directory before opening the webpage.
+If Google Chrome or Firefox is set as your default browser, simply double click the "Index.html", to open the webpage.
+If Internet Explorer is currently set as your default browser, right-click "Index.html" and go to "Open with", then select either Google Chrome or Firefox.
 
