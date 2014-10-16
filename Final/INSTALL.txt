@@ -1,4 +1,5 @@
-In order to view the webpage, double click the "Index.html". 
+In order to view the interactive webpage, double click the "Index.html". 
+This website can be opened as a standalone page, that is stored locally on a computer, or can be hosted on a website.
 
 This webpage is best viewed on a computer that has either the latest version of Google Chrome or Mozilla Firefox installed.
 
@@ -8,9 +9,9 @@ https://www.google.com/chrome/
 You can download Mozilla Firefox from:
 https://www.mozilla.org/en-US/firefox/new/
 
-For correct viewing, the minimum screen resolution, of the computer monitor, must be set to at least 1024x768 or greater. 
+For correct viewing, the minimum screen resolution, of the computer monitor, must be at least 1024x768 or greater. 
 For optimal viewing, It is recommended that the computer screen resolution be set to at least 1280x800 or greater.
-On computers running Windows 7, the screen resolution can be changed by right clicking on a blank area of your desktop, and going to "Screen Resolution".
+On computers running Windows 7, 8 or 8.1, the screen resolution can be changed by right clicking on a blank area of your desktop, and going to "Screen Resolution".
 
 If the screen resolution is smaller than 1024x768 and cannot be changed, an alternative option is to "zoom out" the webpage.
 This can be done by selecting your browser and pressing "Ctrl" and "-" on your keyboard. 
